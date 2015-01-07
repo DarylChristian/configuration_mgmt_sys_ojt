@@ -75,7 +75,7 @@
             <p>Configuration Item Management</p>
 	    	</div>
 	    	<div class="col-sm-4">
-	    		<a href="event.php" ><center><img src="pic/EVEN-MAN.-ICON.jpg" width="100" height="100"></a>
+	    		<a href="eventm.php" ><center><img src="pic/EVEN-MAN.-ICON.jpg" width="100" height="100"></a>
             <p>Events Management</p>
 			  </div>
 			<div class="col-sm-4">

@@ -83,33 +83,179 @@ document.f1.other_text.disabled = status;
             <h2>Add Configuration Item</h2>
               <form method="post" action="addType.php" role="form" class="form-group" >
                 
+              
 
-                    <form class="form-horizontal">
-                       <div class="form-group">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
                           <div class="input-group">
-                            <span class="input-group-addon" id="sizing-addon2">@</span>
-                              <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                            <span class="input-group-addon" id="sizing-addon2">CI Name:</span>
+                              <input type="text" class="form-control" placeholder="Type CI Name" aria-describedby="sizing-addon2" required>
                           </div>
                         </div>
-                     
+                      </div>
+                    </div>
+
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">Type</span>
+                              <select class="form-control" required>
+                                <?php type(); ?>
+                              </select>
+                        </div>
+                      </div>
+                                <div class="col-xs-1">
+                                  <div class="checkbox">
+                                    <label>
+                                       <input type="checkbox"> 
+                                    </label>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-5">
+                                  <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Add type">
+                                      <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">Add</button>
+                                      </span>
+                                  </div><!-- /input-group -->
+                                </div><!-- /.col-lg-6 -->
+
+                    </div>
+                  </div>
+                              
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Model:</span>
+                              <input type="text" class="form-control" placeholder="Type Model" aria-describedby="sizing-addon2" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Item/Part</span>
+                              <input type="text" class="form-control" placeholder="Type Item/Part" aria-describedby="sizing-addon2" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Serial Number:</span>
+                              <input type="text" class="form-control" placeholder="Serial Number" aria-describedby="sizing-addon2" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Specs:</span>
+                              <input type="text" class="form-control" placeholder="Type Specs" aria-describedby="sizing-addon2" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Warranty</span>
+                              <input type="text" class="form-control" placeholder="Date" aria-describedby="sizing-addon2" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">Vendor</span>
+                              <select class="form-control" required>
+                                <?php type(); ?>
+                              </select>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-group">
+                            <span class="input-group-addon" id="sizing-addon2">Acq Date</span>
+                              <input type="text" class="form-control" placeholder="Acquisition Date" aria-describedby="sizing-addon2" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                   
+
+
+                     <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">Location</span>
+                              <select class="form-control" required>
+                                <?php type(); ?>
+                              </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
 
 
+                     <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">Employee</span>
+                              <select class="form-control" required>
+                                <?php type(); ?>
+                              </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
 
+                     <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">Employee</span>
+                              <select class="form-control" required>
+                                <?php type(); ?>
+                              </select>
+                           </div>
+                        </div>
+                      </div>
+                    </div>
 
-
-
-
-
-
-
-                    <input type="submit" class="form-control btn-sm-default" name="submit">
-
-
-
-
-
+<input class="btn btn-primary" type="submit" value="Submit">
 
 
 

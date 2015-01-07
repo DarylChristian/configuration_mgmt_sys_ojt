@@ -6,13 +6,23 @@
  <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!--datepicker -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script>
+    $(function() {
+      $( "#datepicker" ).datepicker({dateFormat:'yy-mm-dd'});
+    });
+    </script>
+      <!-- end of datepicker -->
+ 
 </head>
 
-       <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-  
- 
+
+      
 
 <?php
 
@@ -73,45 +83,41 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-   
-   <div class="container">
-        <h1>EVENT MANAGEMENT</h1> 
-        <br>
+  
+              <div class="form-group">
+                <label for="addedby" class="col-sm-2 control-label">Date Reported</label>
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class='input-group date' >
+                      <input type='text' id="datepicker" name="date" required/>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-      <div class="col-md-5">
-           <div class="input-group">
-            <input type="text" class="form-control" placeholder="name,item,type,model">
-             <span class="input-group-btn">
-              <button class="btn btn-primary" type="button">Search</button>
-          </span>
-       </div><!-- /input-group -->
-     </div><!-- /.col-lg-6 -->
-     <br>
-     <br>
-     <br>
-   
-   <div class="panel panel-default">
-        <!-- Default panel contents -->
-          <div class="panel-heading">HISTORY</div>
+               <form class="form-horizontal" action="insertUser.php" method="post">
+              <div class="form-group">
+                <label for="time" class="col-sm-2 control-label">Time Reported</label>
+                  <div class="col-md-7">
+                    <input type="time" name="timeP" class="form-control" id="time" placeholder="Time" required>
+                   </div>
+              </div>
 
-          <!-- Table -->
-            <table class="table">
-           <thead>
-                <tr>
-                  <th>Date Reported</th>
-                  <th>Time Reported</th>
-                  <th>Reported by</th>
-                  <th>Problem</th>
-                  <th>Solution</th>
-                  <th>Date Resolved</th>
-                  <th>Time Resolved</th>
-                  <th>Resolved by</th>
-                </tr>
-              </thead>
-        </table>
-    </div>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            
+
+ 
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                 <button type="submit" class="btn btn-primary" name="sav">Save</button>
+                </div>
+              </div>
+        </form>
+      
+   
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/docs.min.js"></script>
+
+    
 </body>
 </html>

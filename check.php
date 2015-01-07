@@ -20,9 +20,10 @@
 		$res = $stmt->fetch(PDO::FETCH_ASSOC);
 		$pw_db = $res['password'];
 		$posi=$res['position'];
-
+		$idn=$res['ID'];
 		if($pw_db == $pw)
 		{
+			$_SESSION['ID']=$idn;
 			$_SESSION['pos']=$posi;
 			$_SESSION['username'] = $un;
 			header("location:index.php");

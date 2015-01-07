@@ -7,16 +7,9 @@
     <!-- Bootstrap theme -->
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 </head>
-
-       <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-  
- 
-
 <?php
 
-  include_once("logic.php");
+	include_once("logic.php");
 
  if(isset($_SESSION['username']))
   {
@@ -26,9 +19,8 @@
   elseif(!isset($_SESSION['username']))
   {
     
-  header("location:login.php");
+	header("location:login.php");
   }
-
 
 ?>
 
@@ -48,7 +40,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php">Home</a></li>
+            <li ><a href="index.php">Home</a></li>
             <li><a href="#about">About</a></li>
            
             <li class="dropdown">
@@ -69,48 +61,28 @@
           <ul class="nav navbar-nav navbar-right" >
                <li><a href="logic.php?logout=1">Logout</a></li>
            </ul>
-
-        </div><!--/.nav-collapse -->
+        
+          </div><!--/.nav-collapse -->
       </div>
     </nav>
-   
-   <div class="container">
-        <h1>EVENT MANAGEMENT</h1> 
-        <br>
+               
 
-      <div class="col-md-5">
-           <div class="input-group">
-            <input type="text" class="form-control" placeholder="name,item,type,model">
-             <span class="input-group-btn">
-              <button class="btn btn-primary" type="button">Search</button>
-          </span>
-       </div><!-- /input-group -->
-     </div><!-- /.col-lg-6 -->
-     <br>
-     <br>
-     <br>
-   
-   <div class="panel panel-default">
-        <!-- Default panel contents -->
-          <div class="panel-heading">HISTORY</div>
+      <div class="container">
 
-          <!-- Table -->
-            <table class="table">
-           <thead>
-                <tr>
-                  <th>Date Reported</th>
-                  <th>Time Reported</th>
-                  <th>Reported by</th>
-                  <th>Problem</th>
-                  <th>Solution</th>
-                  <th>Date Resolved</th>
-                  <th>Time Resolved</th>
-                  <th>Resolved by</th>
-                </tr>
-              </thead>
-        </table>
+      	     <div class="row">
+	    	<div class="col-sm-4">
+	    		<a href="AddEvent.php" ><center><img src="pic/add-event.png" width="100" height="100" ></a>
+            <p>Add Event</p>
+	    	</div>
+	    	<div class="col-sm-4">
+	    		<a href="event.php" ><center><img src="pic/view.png" width="100" height="100"></a>
+            <p>View Event</p>
+			  </div>
     </div>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	</div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/docs.min.js"></script>
 </body>
